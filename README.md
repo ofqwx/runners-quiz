@@ -1,6 +1,6 @@
 # On Quiz to find the best shoe for you
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is optimized for mobile devices only, if you're in a browser, open the inspector tools and toggle the device from the toolbar. 
 
 ## Available Scripts
 
@@ -17,6 +17,8 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.
+
+Currently only shared state reducer tests are implemented.
 
 ### `yarn build`
 
