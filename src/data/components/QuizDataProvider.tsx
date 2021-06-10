@@ -1,7 +1,7 @@
 import React, { createContext, ReactNode, useReducer } from "react";
-import data from "../../../data/quiz_data.json";
+import data from "../quiz_data.json";
 import dataReducer from "../reducers/dataReducer";
-import { TQuizState } from "../types";
+import { TQuizState } from "../../types";
 
 export const QuizDataContext = createContext<any>({});
 

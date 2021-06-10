@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { useQuestions } from "../hooks";
+import { useQuestions } from "../../../hooks";
 import { Flex, Box } from "../../../grid";
-import { Answer, QuizDataContext } from ".";
+import { Answer } from ".";
+import { QuizDataContext } from "../../../data";
 import { Button } from "../../../atoms";
 import { VscDebugRestart } from "react-icons/vsc";
 

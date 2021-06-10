@@ -1,4 +1,4 @@
-import { TQuizState } from "../types";
+import { TQuizState } from "../../types";
 
 type TActionType = "nextQuestion" | "reset";
 

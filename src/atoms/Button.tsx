@@ -1,9 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
+import { motion } from "framer-motion";
 
-const Button = styled.button`
+const Button = styled(motion.button)`
   background-color: ${(props) =>
     props.type === "primary"
       ? "#000"
@@ -19,29 +20,48 @@ const Button = styled.button`
       : "1px solid #fff"};
 `;
 
+type TButtonAnimationProps = {
+  children: ReactNode;
+  type?: string;
+  onClick?: () => void;
+};
+
+function AnimatedButton({
+  children,
+  ...props
+}: TButtonAnimationProps): JSX.Element {
+  return (
+    <Button whileTap={{ scale: 0.9 }} {...props}>
+      {children}
+    </Button>
+  );
+}
+
 export default {
   /* eslint-disable */
   Primary: ({ children, ...props }) => (
-    <Button type="primary" {...props}>
+    <AnimatedButton type="primary" {...props}>
       {children}
-    </Button>
+    </AnimatedButton>
   ),
-  Secondary: ({ children, ...props }) => <Button {...props}>{children}</Button>,
+  Secondary: ({ children, ...props }) => (
+    <AnimatedButton {...props}>{children}</AnimatedButton>
+  ),
   Link: ({ children, ...props }) =>
     props.href ? (
       <a href={props.href}>
-        <Button type="link">{children}</Button>
+        <AnimatedButton type="link">{children}</AnimatedButton>
       </a>
     ) : (
       <Link to={props.to}>
-        <Button type="link">{children}</Button>
+        <AnimatedButton type="link">{children}</AnimatedButton>
       </Link>
     ),
   Icon: ({ children, onClick, ...props }) => (
-    <Button type="icon" onClick={onClick}>
+    <AnimatedButton type="icon" onClick={onClick}>
       <IconContext.Provider value={{ ...props }}>
         {children}
       </IconContext.Provider>
-    </Button>
+    </AnimatedButton>
   ),
 };

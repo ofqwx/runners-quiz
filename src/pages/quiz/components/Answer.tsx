@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { TAnswer } from "../types";
+import { TAnswer } from "../../../types";
 import { Button } from "../../../atoms";
-import { QuizDataContext } from ".";
+import { QuizDataContext } from "../../../data";
 
 type TAnswerProps = {
   answer: TAnswer;

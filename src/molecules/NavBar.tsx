@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex, Box } from "../grid";
-import useToggle from "../hooks/useToggle";
+import { useToggle } from "../hooks";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
+import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
   position: relative;
@@ -43,7 +44,27 @@ export default function NavBar(): JSX.Element {
   return (
     <Wrapper>
       <MenuButton onClick={toggle}>
-        {toggled ? <GrClose className="menuIcon" /> : <GiHamburgerMenu className="menuIcon" />}
+        {toggled ? (
+          <motion.div
+            className="menuIcon"
+            animate={{
+              rotate: [0, 270],
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <GrClose className="menuIcon" />
+          </motion.div>
+        ) : (
+          <motion.div
+            className="menuIcon"
+            exit={{
+              rotate: [0, 270],
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <GiHamburgerMenu className="menuIcon" />
+          </motion.div>
+        )}
       </MenuButton>
       <Menu visible={toggled} onRedirect={toggle} />
       <svg

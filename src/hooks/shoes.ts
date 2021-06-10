@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QuizDataContext } from "../components";
+import { QuizDataContext } from "../data";
 import { TShoe } from "../types";
 
 export default function useShoes(): TShoe[] {

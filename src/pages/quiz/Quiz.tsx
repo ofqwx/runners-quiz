@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
-import {
-  Question,
-  QuizDataProvider,
-  QuizDataContext,
-  QuizResult,
-} from "./components";
+import { Question } from "./components";
+import { QuizDataContext } from "../../data";
+import { UnmountAnimation } from "../../atoms";
 import styled from "styled-components";
+import { Redirect } from "react-router-dom";
 
 export const QuestionnaireWrapper = styled.div`
   height: 92.5vh;
@@ -30,20 +28,18 @@ function Quiz(): JSX.Element {
   const { quizState } = useContext(QuizDataContext);
 
   if (quizState.showResults) {
-    return <QuizResult />;
+    return <Redirect to="/result" />;
   }
 
   return (
-    <QuestionnaireWrapper>
-      <Question id={quizState.currentQuestion} />
-    </QuestionnaireWrapper>
+    <UnmountAnimation>
+      <QuestionnaireWrapper>
+        <Question id={quizState.currentQuestion} />
+      </QuestionnaireWrapper>
+    </UnmountAnimation>
   );
 }
 
 export default function WithContext(): JSX.Element {
-  return (
-    <QuizDataProvider>
-      <Quiz />
-    </QuizDataProvider>
-  );
+  return <Quiz />;
 }

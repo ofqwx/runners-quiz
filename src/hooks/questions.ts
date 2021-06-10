@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { QuizDataContext } from "../components";
+import { QuizDataContext } from "../data";
 import { TQuestion } from "../types";
 
 export default function useQuestions(id?: number): TQuestion[] {
