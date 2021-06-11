@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import { Box, Flex } from "../grid";
+import { Box, Flex } from "@ofqwx/react-grid";
 
 type TCardProps = {
   content: ReactNode;

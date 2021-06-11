@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect, useState, useContext } from "react";
 import styled from "styled-components";
 import images from "../../assets/images";
 import { Button, Image, UnmountAnimation } from "../../atoms";
-import { Box, Flex } from "../../grid";
+import { Box, Flex } from "@ofqwx/react-grid";
 import { Card } from "../../molecules";
 import { useShoes } from "../../hooks";
 import { QuestionnaireWrapper } from "../quiz/Quiz";

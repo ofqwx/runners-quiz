@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Flex, Box } from "../grid";
+import { Flex, Box } from "@ofqwx/react-grid";
 import { NavBar } from "../molecules";
 import styled, { createGlobalStyle } from "styled-components";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../../atoms";
-import { Flex, Box } from "../../grid";
+import { Flex, Box } from "@ofqwx/react-grid";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import images from "../../assets/images";

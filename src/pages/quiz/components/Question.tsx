@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuestions } from "../../../hooks";
-import { Flex, Box } from "../../../grid";
+import { Flex, Box } from "@ofqwx/react-grid";
 import { Answer } from ".";
 import { QuizDataContext } from "../../../data";
 import { Button } from "../../../atoms";

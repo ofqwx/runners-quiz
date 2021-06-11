@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Flex, Box } from "../grid";
+import { Flex, Box } from "@ofqwx/react-grid";
 import useToggle from "@ofqwx/use-toggle";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
