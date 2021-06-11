@@ -12,11 +12,8 @@ const Wrapper = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  @import url(‘https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-  
   body {
     margin: 0;
-    font-family: Roboto, sans-serif;
   }
   h1, button {
     font-family: Montserrat;
