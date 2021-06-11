@@ -33,7 +33,7 @@ export default function Question({ id }: TQuestionProps): JSX.Element {
           <h2>{question.copy}</h2>
         </Box>
 
-        <Box margin="-100px 0 0 0">
+        <Box margin={{ top: "-100px" }}>
           <Flex justifyContent="space-evenly">
             {question.answers.map((answer) => (
               <Box key={answer.copy}>

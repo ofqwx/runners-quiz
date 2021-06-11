@@ -12,8 +12,12 @@ const Wrapper = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    height: 100%;
+  }
   body {
     margin: 0;
+    height: 100%
   }
   h1, button {
     font-family: Montserrat;
@@ -31,7 +35,7 @@ export default function DefaultLayout({
           <NavBar />
         </Box>
 
-        <Box padding="0">{children}</Box>
+        <Box padding="0" height="100%" margin={{top: '60px'}}>{children}</Box>
       </Flex>
     </Wrapper>
   );

@@ -8,7 +8,8 @@ import { GrClose } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
-  position: relative;
+  position: fixed;
+  width: 100%;
   height: 60px;
   font-family: "Neutraface Slab Book", Arial, sans-serif;
   color: #999;

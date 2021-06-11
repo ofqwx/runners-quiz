@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Redirect } from "react-router-dom";
 
 export const QuestionnaireWrapper = styled.div`
-  height: 92.5vh;
+  height: 100%;
   background-color: rgb(51, 51, 51);
 
   h2 {

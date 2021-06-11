@@ -11,7 +11,7 @@ import { Redirect } from "react-router-dom";
 import { QuizDataContext } from "../../data";
 
 const ResultsWrapper = styled.div`
-  height: 92.5vh;
+  height: 100%;
   background-color: #fff;
 
   h5 {

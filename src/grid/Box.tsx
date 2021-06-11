@@ -1,11 +1,35 @@
 import React, { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+type TMargin =
+  | string
+  | {
+      [key: string]: string;
+    };
+
+function marginHelper(margin: TMargin): string {
+  if (typeof margin === "string") {
+    return margin;
+  }
+
+  const marginStyle = Object.keys(margin).map(
+    (key) => `margin-${key}: ${margin[key]}`
+  );
+
+  return marginStyle.join(";");
+}
 
 const Wrapper = styled.div`
   height: ${(props) => props.height || ""};
   width: ${(props) => props.width || ""};
-  margin: ${(props) => props.margin || ""};
   padding: ${(props) => props.padding || "8px"};
+
+  ${(props) => {
+    if (props.margin)
+      return css`
+        ${marginHelper(props.margin)};
+      `;
+  }}
 
   flex-basis: ${(props) => props.flexBasis || "auto"};
   flex-grow: ${(props) => (props.flexGrow !== undefined ? props.flexGrow : 0)};
@@ -27,7 +51,7 @@ type TBoxProps = {
   children: ReactNode;
   height?: string;
   width?: string;
-  margin?: string;
+  margin?: TMargin;
   padding?: string | number;
   flexBasis?: string;
   flexGrow?: number;

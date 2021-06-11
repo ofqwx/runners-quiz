@@ -6,7 +6,7 @@ import styled from "styled-components";
 import images from "../../assets/images";
 
 const Wrapper = styled.div`
-  height: 93vh;
+  height: 100%;
   background-image: url(${images.background_start_screen});
   background-image: linear-gradient(to bottom, transparent 70%, #fff),
     url(${images.background_start_screen});
