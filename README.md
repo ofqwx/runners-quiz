@@ -2,6 +2,7 @@
 
 This project is optimized for mobile devices only, if you're in a browser, open the inspector tools and toggle the device from the toolbar. 
 
+Demo available [here](https://gifted-khorana-46aaa8.netlify.app/)
 ## Available Scripts
 
 In the project directory, you can run:
